@@ -12,15 +12,15 @@ module Main(main) where
     utilFill :: Int -> Pixel -> Texture
     utilFill size model = take size $ repeat model
 
-    --Everything being plotted is zoomed in 10x, hence "x / 10".
+    --Everything being plotted is zoomed in 20x, hence "x / 20".
     plotFunc :: Int -> Int -> Function Double -> Pixel -> Pixel -> Texture
     plotFunc width height f bCol pCol = [if y == (fOut !! x) then pCol else bCol | y <- reverse [-halfH .. halfH - 1], x <- [0 .. width - 1]]
-        where fOut = [fromIntegral $ floor $ f (x / 10)  | x <- [- halfW .. halfW - 1]]
+        where fOut = [fromIntegral $ floor $ f (x / 20)  | x <- [- halfW .. halfW - 1]]
               halfW = (fromIntegral width) / 2
               halfH = (fromIntegral height) / 2
 
     f :: Function Double
-    f x = 30 * sin x
+    f x = 40 * sin x
 
     --Entry point(BEGIN)
     main :: IO()

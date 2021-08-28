@@ -31,6 +31,7 @@ You'd be much better off if you compile them yourself(for your own sake).
 To compile HaSDL and the examples, you need:
 - [The Glasgow Haskell Compiler(GHC)](https://www.haskell.org/ghc/)
 - [The GNU C Compiler(GCC) / MinGW](https://gcc.gnu.org/)
+- [SDL](https://www.libsdl.org/download-2.0.php)
 - [make](https://www.gnu.org/software/make/)
 
-The project has been compiled on Windows(evident by the binary extensions and makefile, of course). It should be able to compile on Linux as well, you just need to change the output files' extensions in the makefile. To compile on Windows, you can use Git or the CMD(if you choose the latter, change the calls to `rm` to `del`).
+The project has been compiled on Windows(evident by the binary extensions and makefile, of course). It should be able to compile on Linux as well, you just need to change the output files' extensions in the makefile. To compile on Windows, you can use Git or the CMD(if you choose the latter, change the calls to `rm` to `del`). Make sure to actually make an `SDL2` environment variable, one directory above the SDL2 `bin` folder. Alternatively, you can just add the very same directory to the Makefile variable list, under the name `SDL2`.

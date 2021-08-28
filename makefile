@@ -2,6 +2,8 @@
 CC=gcc
 CH=ghc
 
+MODDIR = "C:\Users\anoma\Desktop\Repos\Haskell\Hasdl\src\hssrc"
+
 BIN=bin
 INCLUDE=include
 
@@ -32,11 +34,11 @@ $(BIN)/Hasdl.o: $(SRCH)/Hasdl.hs
 
 #Graphical calculator
 $(GGC): $(SRCH)/ggc.hs
-	$(CH) -c $< -o $@ -i"C:\Users\anoma\Desktop\SDL2\Hasdl\src\hssrc"
+	$(CH) -O3 -c $< -o $@ -i$(MODDIR)
 
 #Julia set
 $(JULIA): $(SRCH)/julia.hs
-	$(CH) -O3 -c $< -o $@ -i"C:\Users\anoma\Desktop\SDL2\Hasdl\src\hssrc"
+	$(CH) -O3 -c $< -o $@ -i$(MODDIR)
 
 .PHONY: rmobj rmexe
 
