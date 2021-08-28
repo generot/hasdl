@@ -19,7 +19,7 @@ advise against running binaries you randomly found on the internet<br>
 You'd be much better off if you compile them yourself(for your own sake).
 
 ### Examples preview
-- GGC, plotting `f(x) = 30 * sin(x)`
+- GGC, plotting `f(x) = 40 * sin(x)`
 <br><br>
 ![GGC](./img/ggc_sin.png)
 
